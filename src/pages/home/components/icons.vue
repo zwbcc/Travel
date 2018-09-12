@@ -1,6 +1,6 @@
 <template>
   <div class="icons">
-    <swiper>
+    <swiper :options="swiperOption">
       <swiper-slide v-for="(page , index) of pages"  :key="index">
         <div class="icon" v-for="item of page" :key="item.id">
           <div class="icon-img">
@@ -18,53 +18,60 @@ export default {
   name: 'HomeIcons',
   data () {
     return {
-      iconList: [
-        {
-          id: '001',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-          desc: '景点门票'
-        },
-        {
-          id: '002',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
-          desc: '广州必游'
-        },
-        {
-          id: '003',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png',
-          desc: '动植物园'
-        },
-        {
-          id: '004',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/8246f27355943202.png',
-          desc: '游乐场'
-        },
-        {
-          id: '005',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/89/55083b0f1951f302.png',
-          desc: '两江夜游'
-        },
-        {
-          id: '006',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/6a/45f595250c73d102.png',
-          desc: '夏日玩水'
-        },
-        {
-          id: '007',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1808/8d/747c9a29b8dba402.png',
-          desc: '网红套餐'
-        },
-        {
-          id: '008',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
-          desc: '一日游'
-        },
-        {
-          id: '009',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/b1/528a9e80403b8c02.png',
-          desc: '热门景点'
-        }]
+      swiperOption: {
+        loop: false,
+        autoplay: false
+      }
+      // iconList: [
+      //   {
+      //     id: '001',
+      //     imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
+      //     desc: '景点门票'
+      //   },
+      //   {
+      //     id: '002',
+      //     imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
+      //     desc: '广州必游'
+      //   },
+      //   {
+      //     id: '003',
+      //     imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png',
+      //     desc: '动植物园'
+      //   },
+      //   {
+      //     id: '004',
+      //     imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/8246f27355943202.png',
+      //     desc: '游乐场'
+      //   },
+      //   {
+      //     id: '005',
+      //     imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/89/55083b0f1951f302.png',
+      //     desc: '两江夜游'
+      //   },
+      //   {
+      //     id: '006',
+      //     imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/6a/45f595250c73d102.png',
+      //     desc: '夏日玩水'
+      //   },
+      //   {
+      //     id: '007',
+      //     imgUrl: 'http://img1.qunarzz.com/piao/fusion/1808/8d/747c9a29b8dba402.png',
+      //     desc: '网红套餐'
+      //   },
+      //   {
+      //     id: '008',
+      //     imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
+      //     desc: '一日游'
+      //   },
+      //   {
+      //     id: '009',
+      //     imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/b1/528a9e80403b8c02.png',
+      //     desc: '热门景点'
+      //   }]
     }
+  },
+  props : {
+    iconList: Array
   },
   computed: {
     pages () {

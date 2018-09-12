@@ -5,10 +5,9 @@
     </div>
     <div class="header-input">
       <span class="iconfont">&#xe632;</span>
-      aaaaaaa
     </div>
     <div class="header-right">
-      城市
+      广州
       <span class="iconfont arrow-icon" >&#xe64a;</span>
     </div>
   </div>
@@ -16,7 +15,7 @@
 
 <script>
 export default {
-  name: 'homeHeader'
+  name: 'homeHeader',
 }
 </script>
 
