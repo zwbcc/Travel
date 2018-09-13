@@ -8,7 +8,7 @@
     </div>
     <router-link to="/city" tag="div">
       <div class="header-right">
-        广州
+        {{this.$store.state.city}}
         <span class="iconfont arrow-icon">&#xe64a;</span>
       </div>
     </router-link>

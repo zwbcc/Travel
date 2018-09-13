@@ -3,7 +3,8 @@
     <li class="item"
         v-for="item of letters"
         :key="item"
-        @touchstart="handleTouchStart"
+        :ref="item"
+        @touchstart.prevent="handleTouchStart"
         @touchmove="handleTouchMove"
         @touchend="handleTouchEnd"
         @click="handleLetterClick"
@@ -50,7 +51,7 @@ export default {
           clearTimeout(this.timer)
         }
         this.timer = setTimeout(() => {
-          const touchY = e.touch[0].clientY - 79
+          const touchY = e.touches[0].clientY - 79
           const index = Math.floor((touchY - this.startY) / 20)
           if (index >= 0 && index < this.letters.length) {
             this.$emit('change', this.letters[index])
