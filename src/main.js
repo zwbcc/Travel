@@ -6,6 +6,7 @@ import router from './router'
 import axios from 'axios'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import store from './store'
+import 'babel-polyfill'
 import 'swiper/dist/css/swiper.css'
 /* 引入fastclick文件 */
 import fastClick from 'fastclick'
