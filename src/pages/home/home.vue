@@ -28,7 +28,7 @@ export default {
   },
   methods: {
     getHomeInfo () {
-      this.axios.get('/api/index.json')
+      this.axios.get('/static/mock/index.json')
         .then(this.getHomeInfoSucc)
     },
     getHomeInfoSucc (res) {
