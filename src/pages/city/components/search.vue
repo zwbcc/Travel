@@ -11,7 +11,7 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-  @import '~styles/varibles.styl'
+@import '~styles/varibles.styl'
   .search
     height .72rem
     padding: 0 .1rem
@@ -26,4 +26,3 @@ export default {
       color: #666
       padding: 0 .1rem
 </style>
-
