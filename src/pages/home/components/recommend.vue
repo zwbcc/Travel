@@ -17,8 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data() {
-    return{
+  data () {
+    return {
       // recommendList:[
       //   {
       //     id:'001',
@@ -51,32 +51,33 @@ export default {
   .recommend-title
     margin-top .2rem
     line-height: .8rem
-    background : #eee
+    background: #eee
     text-indent: .2rem
+
   .items
     margin-left: 0.24rem
     .item
       display flex
-      height : 2rem
-      padding : 0.2rem 0
-      overflow : hidden
+      height: 2rem
+      padding: 0.2rem 0
+      overflow: hidden
       .item-img
         display block
         width 2rem
         height 2rem
       .item-info
-        flex : 1
+        flex: 1
         padding-left: .1rem
         .item-title
-          line-height : .54rem
-          font-size : .32rem
+          line-height: .54rem
+          font-size: .32rem
         .item-desc
           line-height .4rem
           color: #ccc
         .item-button
-          background : #ff9300
-          margin-bottom : -.88rem
-          padding : 0 .1rem
-          border-radius : .06rem
+          background: #ff9300
+          margin-bottom: -.88rem
+          padding: 0 .1rem
+          border-radius: .06rem
 
 </style>

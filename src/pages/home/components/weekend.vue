@@ -18,7 +18,7 @@
 <script>
 export default {
   name: 'HomeWeekend',
-  data() {
+  data () {
     return {
       // weekendList: [
       //   {
@@ -48,40 +48,42 @@ export default {
       // ]
     }
   },
-  props : {
-    weekendList : Array
+  props: {
+    weekendList: Array
   }
 }
 </script>
 
 <style scoped lang="stylus">
-.weekend-title
-  height: .8rem;
-  padding-left: .26rem;
-  line-height: .8rem;
-  color: #212121;
-.item-img-wrapper
-  overflow: hidden;
-  height : 0;
-  padding-bottom : 37.4375%;
-  .item-img-cont
-    width: 100%
-.item-info
-  flex : 1
-  padding-left: .1rem
-  .item-title
-    padding-right: 1.4rem;
+  .weekend-title
+    height: .8rem;
+    padding-left: .26rem;
+    line-height: .8rem;
     color: #212121;
-    font-size: .28rem;
-    line-height: .48rem
-  .item-desc
-    padding-right: 1.4rem;
-    color: #616161;
-    font-size: .24rem;
-    line-height: .42rem
-  .item-button
-    background : #ff9300
-    margin-bottom : -.88rem
-    padding : 0 .1rem
-    border-radius : .06rem
+
+  .item-img-wrapper
+    overflow: hidden;
+    height: 0;
+    padding-bottom: 37.4375%;
+    .item-img-cont
+      width: 100%
+
+  .item-info
+    flex: 1
+    padding-left: .1rem
+    .item-title
+      padding-right: 1.4rem;
+      color: #212121;
+      font-size: .28rem;
+      line-height: .48rem
+    .item-desc
+      padding-right: 1.4rem;
+      color: #616161;
+      font-size: .24rem;
+      line-height: .42rem
+    .item-button
+      background: #ff9300
+      margin-bottom: -.88rem
+      padding: 0 .1rem
+      border-radius: .06rem
 </style>

@@ -1,8 +1,8 @@
 <template>
   <div class="swiper">
     <swiper :options="swiperOption" v-if="swiperList.length">
-      <swiper-slide v-for="item of swiperList" :key = item.id>
-        <img class="swiper-img" :src="item.imgUrl"  alt="">
+      <swiper-slide v-for="item of swiperList" :key=item.id>
+        <img class="swiper-img" :src="item.imgUrl" alt="">
       </swiper-slide>
       <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
@@ -16,8 +16,8 @@ export default {
     return {
       swiperOption: {
         pagination: '.swiper-pagination',
-        loop: true,
-      },
+        loop: true
+      }
       // swiperList: [
       //   {
       //     id: '0001',
@@ -34,20 +34,19 @@ export default {
       // ]
     }
   },
-  props: {
-    swiperList:Array
-  }
+  props: ['swiperList']
 }
 </script>
 
 <style scoped lang="stylus">
- .swiper >>> .swiper-pagination-bullet-active
-   background : #fff
- .swiper
-   overflow:hidden
-   width:100%
-   height:0
-   padding-bottom:31%
-   .swiper-img
-     width: 100%
+  .swiper >>> .swiper-pagination-bullet-active
+    background: #fff
+
+  .swiper
+    overflow: hidden
+    width: 100%
+    height: 0
+    padding-bottom: 31%
+    .swiper-img
+      width: 100%
 </style>

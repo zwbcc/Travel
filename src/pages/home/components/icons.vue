@@ -1,7 +1,7 @@
 <template>
   <div class="icons">
     <swiper :options="swiperOption">
-      <swiper-slide v-for="(page , index) of pages"  :key="index">
+      <swiper-slide v-for="(page , index) of pages" :key="index">
         <div class="icon" v-for="item of page" :key="item.id">
           <div class="icon-img">
             <img class="icon-img-content" :src="item.imgUrl" alt="">
@@ -70,7 +70,7 @@ export default {
       //   }]
     }
   },
-  props : {
+  props: {
     iconList: Array
   },
   computed: {
@@ -95,8 +95,9 @@ export default {
   .icons >>> .swiper-container
     height: 0
     padding-bottom: 50%
+
   .icons
-    margin-top : .1rem
+    margin-top: .1rem
     .icon
       overflow hidden
       position: relative

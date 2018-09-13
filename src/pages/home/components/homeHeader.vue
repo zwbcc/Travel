@@ -6,33 +6,35 @@
     <div class="header-input">
       <span class="iconfont">&#xe632;</span>
     </div>
-    <div class="header-right">
-      广州
-      <span class="iconfont arrow-icon" >&#xe64a;</span>
-    </div>
+    <router-link to="/city" tag="div">
+      <div class="header-right">
+        广州
+        <span class="iconfont arrow-icon">&#xe64a;</span>
+      </div>
+    </router-link>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'homeHeader',
+  name: 'homeHeader'
 }
 </script>
 
 <style scoped lang="stylus">
   @import '~styles/varibles.styl';
   .header
-    display :flex
+    display: flex
     height: .86rem
     background-color: $bgColor;
-    color : #ffffff
-    line-height :.86rem
+    color: #ffffff
+    line-height: .86rem
     .header-left
       width: .64rem
       float: left
       .back-icon
         text-align: center
-        font-size : .4rem
+        font-size: .4rem
     .header-input
       flex: 1
       height: .64rem
@@ -42,9 +44,9 @@ export default {
       background: #ffffff
       margin-top .12rem
       border-radius: .1rem
-      color : #ccc
+      color: #ccc
     .header-right
-      width :1.24rem
+      width: 1.24rem
       text-align: center
       float: right
       .arrow-icon
